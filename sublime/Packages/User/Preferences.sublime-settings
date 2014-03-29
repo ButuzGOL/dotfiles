@@ -1,0 +1,32 @@
+{
+  "bold_folder_labels": true,
+  "color_scheme": "Packages/User/base16-ocean.dark (SL).tmTheme",
+  "ensure_newline_at_eof_on_save": true,
+  "file_exclude_patterns":
+  [
+    ".DS_Store",
+  ],
+  "fold_buttons": false,
+  "folder_exclude_patterns":
+  [
+    ".git",
+    "log",
+    "tmp",
+    "node_modules",
+    ".idea",
+    ".svn",
+    ".hg",
+    "CVS",
+    "_.tmp",
+  ],
+  "font_size": 14,
+  "highlight_line": false,
+  "highlight_modified_tabs": true,
+  "rulers": [79],
+  "save_on_focus_lost": false,
+  "tab_size": 2,
+  "theme": "Spacegray.sublime-theme",
+  "translate_tabs_to_spaces": true,
+  "trim_trailing_white_space_on_save": true,
+  "word_wrap": true
+}
