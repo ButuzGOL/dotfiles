@@ -32,3 +32,12 @@ alias chromekill="ps ux | grep '[C]hrome Helper --type=renderer' | grep -v exten
 
 # Reload the shell (i.e. invoke as a login shell)
 alias reload="exec $SHELL -l"
+
+# Disable sertificate check for wget.
+alias wget='wget --no-check-certificate'
+
+# JSHint short-cut.
+alias lint=jshint
+
+# Faster NPM for europeans.
+alias npme='npm --registry http://registry.npmjs.eu'
