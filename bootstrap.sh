@@ -7,7 +7,7 @@ pushd .
 mkdir -p $dev
 cd $dev
 
-echo 'Enter new hostname of the machine (e.g. macbook-paulmillr)'
+echo 'Enter new hostname of the machine (e.g. macbook-butuzgol)'
   read hostname
   echo "Setting new hostname to $hostname..."
   scutil --set HostName "$hostname"
@@ -61,23 +61,21 @@ echo 'Applying sublime config...'
 
 open_apps() {
   echo 'Install apps:'
-  echo 'Dropbox:'
+  echo 'Dropbox'
   open https://www.dropbox.com
-  echo 'Chrome Canary:'
+  echo 'Chrome Canary'
   open https://www.google.com/intl/en/chrome/browser/canary.html
-  echo 'Skype:'
+  echo 'Skype'
   open http://www.skype.com/en/download-skype/skype-for-computer/
-  echo 'Transmission:'
+  echo 'Transmission'
   open http://www.transmissionbt.com
-  echo 'Divvy:'
+  echo 'Divvy'
   open https://mizage.com/divvy/
-  echo 'Divvy:'
-  open https://mizage.com/divvy/
-  echo 'Transmit:'
+  echo 'Transmit'
   open https://panic.com/transmit/
-  echo 'SourceTree:'
+  echo 'SourceTree'
   open http://www.sourcetreeapp.com/
-  echo 'MPlayerX:'
+  echo 'MPlayerX'
   open http://mplayerx.org/
   echo 'Pixelmator'
 }
