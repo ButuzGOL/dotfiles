@@ -6,3 +6,5 @@ if (( $+commands[fortune] )); then
   fortune -a
   print
 fi
+
+source ~/.bashrc
