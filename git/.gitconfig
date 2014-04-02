@@ -92,7 +92,7 @@
   contrib = !sh "$HOME/Developer/butuzgol/dotfiles/git/extras/git-contrib.sh"
 
 [push]
-  default = master
+  default = current
 
 [color]
   ui = true
