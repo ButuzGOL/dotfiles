@@ -6,7 +6,6 @@
   [
     ".DS_Store",
   ],
-  "fold_buttons": false,
   "folder_exclude_patterns":
   [
     ".git",
@@ -17,12 +16,11 @@
     ".svn",
     ".hg",
     "CVS",
-    "_.tmp",
   ],
   "font_size": 14,
-  "highlight_line": false,
+  "highlight_line": true,
   "highlight_modified_tabs": true,
-  "rulers": [79],
+  "rulers": [80],
   "save_on_focus_lost": false,
   "tab_size": 2,
   "theme": "Spacegray.sublime-theme",
