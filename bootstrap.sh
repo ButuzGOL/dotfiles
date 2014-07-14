@@ -28,7 +28,7 @@ echo 'Copying public key to clipboard. Paste it into your Github account...'
 which -s brew
 if [[ $? != 0 ]]; then
   echo 'Installing Homebrew...'
-    ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)"
+    ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
     brew update
     brew install htop mysql nginx node ruby
 fi
