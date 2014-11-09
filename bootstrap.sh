@@ -2,11 +2,6 @@
 
 # A simple script for setting up OSX dev environment.
 
-dev="$HOME/Developer"
-pushd .
-mkdir -p $dev
-cd $dev
-
 echo 'Enter new hostname of the machine (e.g. macbook-butuzgol)'
   read hostname
   echo "Setting new hostname to $hostname..."
@@ -28,9 +23,10 @@ echo 'Copying public key to clipboard. Paste it into your Github account...'
 which -s brew
 if [[ $? != 0 ]]; then
   echo 'Installing Homebrew...'
-    ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
-    brew update
-    brew install htop mysql nginx node ruby
+    echo 'Installing Homebrew...'
+      ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+      brew update
+      brew install node ruby
 fi
 
 echo 'Tweaking OS X...'
@@ -42,22 +38,30 @@ echo 'Installing Quick Look plugins...'
   brew install brew-cask
   brew cask install suspicious-package quicklook-json qlmarkdown qlstephen qlcolorcode
 
+echo 'Applying sublime config...'
+  st=$(pwd)/sublime/Packages
+  as="$HOME/Library/Application Support/Sublime Text 3/Packages"
+  asprefs="$as/User/Preferences.sublime-settings"
+
+  if [[ ! -d "$as" ]]; then
+    echo "Install Sublime Text http://www.sublimetext.com"
+    read -p "Press [Enter] after install sublime ..."
+  fi
+
+  rm "$asprefs"
+
+  ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" /usr/local/bin/subl
+  ln -s "$(pwd)/sublime/Packages/User/Preferences.sublime-settings" "$HOME/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings"
+
+  for theme in $st/Theme*; do
+    cp -R "$theme" "$as"
+  done
+
 echo 'Symlinking config files...'
   source 'symlink.sh'
 
-echo 'Applying sublime config...'
-  st=$(pwd)/sublime/packages
-  as="$HOME/Application Support/Sublime Text 3/Packages"
-  asprefs="$as/User/Preferences.sublime-settings"
-  if [[ -d "$as" ]]; then
-    for theme in $st/Theme*; do
-      cp -r $theme $as
-    done
-    rm $asprefs
-    cp -r $st/pm-themes $as
-  else
-    echo "Install Sublime Text http://www.sublimetext.com"
-  fi
+echo 'Installing git extras...'
+  brew install git-extras
 
 open_apps() {
   echo 'Install apps:'
@@ -69,20 +73,13 @@ open_apps() {
   open http://www.skype.com/en/download-skype/skype-for-computer/
   echo 'Transmission'
   open http://www.transmissionbt.com
-  echo 'Divvy'
-  open https://mizage.com/divvy/
   echo 'Transmit'
   open https://panic.com/transmit/
-  echo 'SourceTree'
-  open http://www.sourcetreeapp.com/
-  echo 'MPlayerX'
-  open http://mplayerx.org/
-  echo 'Pixelmator'
+  echo 'Timeout'
+  open http://www.dejal.com/timeout/
 }
 
 echo 'Should I give you links for system applications (e.g. Skype, Chrome, etc)?'
 echo 'n / y'
 read give_links
 [[ "$give_links" == 'y' ]] && open_apps
-
-popd

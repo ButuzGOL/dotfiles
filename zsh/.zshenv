@@ -16,9 +16,5 @@ zstyle -s ':prezto:module:git:status:ignore' submodules '_git_status_ignore_subm
   || _git_status_ignore_submodules='none'
 
 # Commonly used directories.
-playground="$HOME/Desktop/Playground"
+playground="$HOME/Playground"
 
-# Commonly used directories.
-dev="$HOME/Developer"
-butuz="$dev/ButuzGOL"
-as="$HOME/Library/Application Support"

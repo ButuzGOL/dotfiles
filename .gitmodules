@@ -1,3 +1,6 @@
 [submodule "sublime/Packages/Theme - Spacegray"]
   path = sublime/Packages/Theme - Spacegray
   url = git@github.com:kkga/spacegray.git
+[submodule "sublime/Packages/Theme - Brogrammer"]
+	path = sublime/Packages/Theme - Brogrammer
+	url = git@github.com:kenwheeler/brogrammer-theme.git

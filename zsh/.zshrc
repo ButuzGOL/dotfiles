@@ -7,7 +7,7 @@ fi
 autoload -U colors && colors
 
 # Load and execute the prompt theming system.
-fpath=("$butuz/dotfiles/zsh/prompts" $fpath)
+fpath=("$playground/dotfiles/zsh/prompts" $fpath)
 autoload -Uz promptinit && promptinit
 prompt 'paulmillr'
 

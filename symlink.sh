@@ -1,7 +1,7 @@
 #!/bin/bash
 
-dev="$HOME/Developer"
-dotfiles="$dev/ButuzGOL/dotfiles"
+dev="$HOME/Playground"
+dotfiles="$dev/dotfiles"
 
 if [[ -d "$dotfiles" ]]; then
   echo "Symlinking dotfiles from $dotfiles"
@@ -34,5 +34,3 @@ linkDir "./zsh"
 link "$dotfiles/.aliases" "$HOME/.aliases"
 link "$dotfiles/.bashrc" "$HOME/.bashrc"
 link "$dotfiles/.gemrc" "$HOME/.gemrc"
-
-link "$dotfiles/sublime/Packages/User/Preferences.sublime-settings" "$HOME/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings"

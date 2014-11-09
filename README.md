@@ -17,7 +17,9 @@ sudo bash .osx
 
 ### Bootstrap new system
 ```
-sudo bash bootstap.sh
+git clone --recursive https://github.com/ButuzGOL/dotfiles.git
+cd dotfiles
+bash bootstap.sh
 ```
 
 ## Structure
@@ -26,7 +28,7 @@ sudo bash bootstap.sh
 * `zsh` — zsh config files also themes
 * `.` - other configs (.aliases, .bashrc, .gemrc, etc)
 
-## Some stuff was taken from (Many Thanks)
+## Some stuff was taken from so (Many Thanks)
 * [Paul Miller’s dotfiles](https://github.com/paulmillr/dotfiles)
 * [Zach Holman's dotfiles](https://github.com/holman/dotfiles)
 * [Mathias Bynens' dotfiles](https://github.com/mathiasbynens/dotfiles)

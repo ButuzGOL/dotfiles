@@ -24,6 +24,7 @@
   c = commit -m                     # commit with message
   ca = commit -am                   # commit all with message
   ci = commit                       # commit
+  fc = commit -am 'Initial commit.'
   amend = commit --amend            # ammend your last commit
   ammend = commit --amend           # ammend your last commit
   fc = commit -am 'Initial commit.'
@@ -85,12 +86,9 @@
 
   # tag
   t = tag -n                        # show tags with <n> lines of each tag message
+  rmtag = "!sh -c 'git tag -d $1; git push origin :refs/tags/$1'"
 
   # extras
-  delete-branch = !sh "$HOME/Developer/butuzgol/dotfiles/git/extras/git-delete-branch.sh"
-  release = !sh "$HOME/Developer/butuzgol/dotfiles/git/extras/git-release.sh"
-  summary = !sh "$HOME/Developer/butuzgol/dotfiles/git/extras/git-summary.sh"
-  contrib = !sh "$HOME/Developer/butuzgol/dotfiles/git/extras/git-contrib.sh"
 
 [push]
   default = current
@@ -124,16 +122,12 @@
 # URL shorthands
 [url "git@github.com:"]
   insteadOf = "gh:"
-  pushInsteadOf = "github:"
+  pushInsteadOf = "gh:"
   pushInsteadOf = "git://github.com/"
-[url "git://github.com/"]
-  insteadOf = "github:"
 [url "git@gist.github.com:"]
-  insteadOf = "gst:"
+  insteadOf = "gist:"
   pushInsteadOf = "gist:"
   pushInsteadOf = "git://gist.github.com/"
-[url "git://gist.github.com/"]
-  insteadOf = "gist:"
 
 [mergetool]
   keepBackup = true
