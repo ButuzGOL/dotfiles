@@ -73,8 +73,6 @@ open_apps() {
   open http://www.skype.com/en/download-skype/skype-for-computer/
   echo 'Transmission'
   open http://www.transmissionbt.com
-  echo 'Transmit'
-  open https://panic.com/transmit/
   echo 'Timeout'
   open http://www.dejal.com/timeout/
 }
