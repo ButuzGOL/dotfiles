@@ -26,7 +26,7 @@ if [[ $? != 0 ]]; then
     echo 'Installing Homebrew...'
       ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
       brew update
-      brew install node ruby
+      brew install node ruby mongodb git-extras
 fi
 
 echo 'Tweaking OS X...'
@@ -59,9 +59,6 @@ echo 'Applying sublime config...'
 
 echo 'Symlinking config files...'
   source 'symlink.sh'
-
-echo 'Installing git extras...'
-  brew install git-extras
 
 open_apps() {
   echo 'Install apps:'
