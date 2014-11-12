@@ -7,7 +7,7 @@ alias ~="cd ~" # `cd` is probably faster to type though
 alias -- -="cd -"
 
 # Server alias
-alias server='open http://localhost:8000 && http-server -p 8000'
+alias server='open http://localhost:8000 && python -m SimpleHTTPServer'
 
 # List all files colorized in long format
 alias l="ls -lF ${colorflag}"
