@@ -42,4 +42,4 @@ alias lint=jshint
 # Faster NPM for europeans.
 alias npme='npm --registry http://registry.npmjs.eu'
 
-alias chrome='open -a Google\ Chrome --args --disable-web-security'
+alias chrome='open -a Google\ Chrome\ Canary --args --disable-web-security'
