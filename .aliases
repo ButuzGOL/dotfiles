@@ -46,3 +46,5 @@ alias chrome='open -a Google\ Chrome\ Canary --args --disable-web-security'
 alias chrome-s='open -a Google\ Chrome --args --disable-web-security'
 
 alias route='sudo route add -net $1 -gateway 192.168.0.3'
+alias gitpatch='PP=$1 && rm -f $PP && git stash save -u && git stash show -p > $PP && git diff 4b825dc642cb6eb9a060e54bf8d69288fbee4904 "stash^3" >> $PP && git stash apply'
+
