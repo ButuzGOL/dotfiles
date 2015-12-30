@@ -26,7 +26,7 @@ if [[ $? != 0 ]]; then
     echo 'Installing Homebrew...'
       ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
       brew update
-      brew install node ruby mongodb git-extras
+      brew install git-extras
 fi
 
 echo 'Tweaking OS X...'
@@ -38,25 +38,6 @@ echo 'Installing Quick Look plugins...'
   brew install brew-cask
   brew cask install suspicious-package quicklook-json qlmarkdown qlstephen qlcolorcode
 
-echo 'Applying sublime config...'
-  st=$(pwd)/sublime/Packages
-  as="$HOME/Library/Application Support/Sublime Text 3/Packages"
-  asprefs="$as/User/Preferences.sublime-settings"
-
-  if [[ ! -d "$as" ]]; then
-    echo "Install Sublime Text http://www.sublimetext.com"
-    read -p "Press [Enter] after install sublime ..."
-  fi
-
-  rm "$asprefs"
-
-  ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" /usr/local/bin/subl
-  ln -s "$(pwd)/sublime/Packages/User/Preferences.sublime-settings" "$HOME/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings"
-
-  for theme in $st/Theme*; do
-    cp -R "$theme" "$as"
-  done
-
 echo 'Symlinking config files...'
   source 'symlink.sh'
 
@@ -64,12 +45,16 @@ open_apps() {
   echo 'Install apps:'
   echo 'Dropbox'
   open https://www.dropbox.com
-  echo 'Chrome Canary'
-  open https://www.google.com/intl/en/chrome/browser/canary.html
+  echo 'Chrome'
+  open https://www.google.com/chrome/browser/desktop/index.html
   echo 'Skype'
   open http://www.skype.com/en/download-skype/skype-for-computer/
   echo 'Transmission'
   open http://www.transmissionbt.com
+  echo 'Slack'
+  open https://itunes.apple.com/us/app/slack/id803453959?mt=12
+  echo 'Atom'
+  open https://atom.io/
   echo 'Timeout'
   open http://www.dejal.com/timeout/
 }
