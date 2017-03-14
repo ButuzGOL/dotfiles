@@ -39,8 +39,9 @@ alias wget='wget --no-check-certificate'
 # Faster NPM for europeans.
 alias npme='npm --registry http://registry.npmjs.eu'
 
-alias chrome-c='open -a Google\ Chrome\ Canary --args --disable-web-security'
-alias chrome='open -a Google\ Chrome --args --disable-web-security'
-
 alias gitpatch='PP=$1 && rm -f $PP && git stash save -u && git stash show -p > $PP && git diff 4b825dc642cb6eb9a060e54bf8d69288fbee4904 "stash^3" >> $PP && git stash apply'
 alias gitforksync='git fetch upstream && git merge upstream/master && git push'
+
+alias chrome='open /Applications/Google\ Chrome.app --args --remote-debugging-port=9222'
+
+alias engine='cd $playground/revvy-wrapper; npm run cengine;'

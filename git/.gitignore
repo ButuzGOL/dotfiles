@@ -8,12 +8,14 @@
 # OS or Editor folders
 .DS_Store
 .cache
-Icon?
+#Icon?
 
 # Folders to ignore
 .hg
 .svn
 .idea
+.history
+.vscode
 
 # Node.js package manager
 /node_modules
@@ -22,3 +24,4 @@ Icon?
 # Other stuff
 *.pyc
 /tmp
+rui
