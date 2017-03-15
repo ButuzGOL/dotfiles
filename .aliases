@@ -44,4 +44,7 @@ alias gitforksync='git fetch upstream && git merge upstream/master && git push'
 
 alias chrome='open /Applications/Google\ Chrome.app --args --remote-debugging-port=9222'
 
-alias engine='cd $playground/revvy-wrapper; npm run cengine;'
+alias cpqengine='cd $playground/revvy-wrapper; npm run cengine;'
+
+alias cpqstart='cd $playground/revvy-wrapper/nimbus/uimodules; app=cpq npm start;'
+alias cpqlint='cd $playground/revvy-wrapper/nimbus/uimodules; app=cpq npm run lint;'
